@@ -1,0 +1,16 @@
+scrape "jianshu.com" and save each post 
+	in a seperate .txt file.
+
+
+* get one user's all post, save it in a list.
+* loop through it and save the text.
+
+
+Todos:
+	1) start the function with python requests.  [done]
+	2) get all the user links with a python function
+		and save them into a .txt file.  [done]
+
+	3) loop through all the user posts link: *******
+		get each post:
+			get post text data, save to .txt.
