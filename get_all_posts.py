@@ -21,11 +21,12 @@ def get_all_post_of_user(link):
     total_posts = get_total_post_count(link)
     pages = total_posts / posts_per_page
     pages = ceil(pages)
-    print(f"{pages} articles in: {link}")
+    print(f"{pages} Pages in: {link}")
     link = link.replace("users", "u")
 
     all_links = []
 
+    # for i in range(1, pages+1):
     for i in range(1, pages+1):
         # print(f"Getting page no: {i}")
         aurl = link+ f"?order_by=shared_at&page={i}"
@@ -36,7 +37,6 @@ def get_all_post_of_user(link):
 
         hrefs = page.xpath("//a[@class='title']/@href").getall()
         for i in hrefs:
-            print(i)
             abs_link = core_link + i
             all_links.append(abs_link)
 
