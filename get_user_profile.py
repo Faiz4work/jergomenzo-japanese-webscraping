@@ -24,7 +24,7 @@ for i in range(1, last_page+1):
     print(f"Added: {len(absolute_user_profiles)} urls.")
 
 
-with open("user_profiles.txt", 'w') as f:
+with open("user_profiles_2.txt", 'w') as f:
     for i in all_profile_links:
         f.write(i + '\n')
     

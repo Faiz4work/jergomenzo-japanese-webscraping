@@ -1,6 +1,7 @@
 import requests as r
 from parsel import Selector
 from threading import Thread
+from time import sleep
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36"
@@ -34,6 +35,8 @@ def save_all_posts(dir_name, txt_file):
         t.start()
         print(f"{counter} posts saved!")
         counter  += 1
+        sleep(0.1)
+        
 
 
 
